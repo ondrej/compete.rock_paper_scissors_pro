@@ -147,7 +147,7 @@ namespace RockPaperScissorsPro
       _value = null;
       _sw.Start();
       thread.Start(func);
-      _stopWaiting.WaitOne(TimeSpan.FromMilliseconds(5));
+      _stopWaiting.WaitOne(TimeSpan.FromMilliseconds(500));
       _sw.Stop();
 
       if (_value == null)

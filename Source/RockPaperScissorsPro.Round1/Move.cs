@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace RockPaperScissorsPro
 {
@@ -8,6 +9,12 @@ namespace RockPaperScissorsPro
     public static Move Rock { get { return new RockMove(); } }
     public static Move Scissors { get { return new ScissorsMove(); } }
     public static Move Paper { get { return new PaperMove(); } }
+
+    public static Dictionary<string, Move> Moves = new Dictionary<string,Move>() {
+        { "Rock", Round1Move.Rock },
+        { "Scissors", Round1Move.Scissors },
+        { "Paper", Round1Move.Paper }
+    };
   }
 
   public abstract class Move
